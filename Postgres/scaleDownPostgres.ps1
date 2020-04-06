@@ -3,7 +3,6 @@ $tenantId = Get-AutomationVariable -Name 'TennantID'
 $clientId =  Get-AutomationVariable -Name 'ClientId'
 $clientSecret =  Get-AutomationVariable -Name 'ClientSecret'
 
-$UnsecurePassword = $clientSecret
 
 $param = @{
     "grant_type" = "client_credentials"
@@ -56,5 +55,4 @@ Invoke-RestMethod $url `
     -Headers $headers `
     -Body $jsonbody `
     -ContentType "application/json"
-
 
