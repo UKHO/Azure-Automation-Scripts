@@ -22,7 +22,7 @@ $headers = @{
     "Authorization" = "Bearer " + $accessToken
 }
 
-$url = $resourceURI + "?api-version=2017-12-01"
+$url = "https://management.azure.com/" + $resourceURI + "?api-version=2017-12-01"
 
 $currentServerConfig = Invoke-RestMethod $url `
     -Method GET `
