@@ -8,7 +8,7 @@ $param = @{
     "grant_type" = "client_credentials"
     "client_id" = $clientId
     "resource" = "https://management.core.windows.net"
-    "client_secret" = ($UnsecurePassword)
+    "client_secret" = ($clientSecret)
 }
 
 $accessToken = (Invoke-RestMethod `
